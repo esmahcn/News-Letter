@@ -57,7 +57,7 @@ function App() {
           {/* Right side */}
           <div className="basis-[40%] hidden md:block">
             <img
-              src=bg
+              src={bg}
               alt="Illustration"
               className="w-full h-full object-cover rounded-r-2xl"
             />
