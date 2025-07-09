@@ -15,7 +15,7 @@ function App() {
             <ul className="mb-6 space-y-2 text-sm text-gray-700">
               <li className="flex items-center">
                 <img
-                  src="src/img/icon-list.svg"
+                  src="public/img/icon-list.svg"
                   alt="Check icon"
                   className="w-4 h-4 mr-2"
                 />
@@ -23,7 +23,7 @@ function App() {
               </li>
               <li className="flex items-center">
                 <img
-                  src="src/img/icon-list.svg"
+                  src="public/img/icon-list.svg"
                   alt="Check icon"
                   className="w-4 h-4 mr-2"
                 />
@@ -31,7 +31,7 @@ function App() {
               </li>
               <li className="flex items-center">
                 <img
-                  src="src/img/icon-list.svg"
+                  src="public/img/icon-list.svg"
                   alt="Check icon"
                   className="w-4 h-4 mr-2"
                 />
@@ -54,7 +54,7 @@ function App() {
           {/* Right side */}
           <div className="basis-[40%] hidden md:block">
             <img
-              src="src\img\illustration-sign-up-desktop.svg"
+              src="public/img/illustration-sign-up-desktop.svg"
               alt="Illustration"
               className="w-full h-full object-cover rounded-r-2xl"
             />
