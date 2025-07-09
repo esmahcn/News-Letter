@@ -1,5 +1,8 @@
 
 import icon from './img/icon-list.svg'
+import bg from './img/illustration-sign-up-desktop.svg'
+
+
 function App() {
   return (
     <>
@@ -23,7 +26,7 @@ function App() {
               </li>
               <li className="flex items-center">
                 <img
-                  src="public/img/icon-list.svg"
+                  src={icon}
                   alt="Check icon"
                   className="w-4 h-4 mr-2"
                 />
@@ -31,7 +34,7 @@ function App() {
               </li>
               <li className="flex items-center">
                 <img
-                  src="public/img/icon-list.svg"
+                  src={icon}
                   alt="Check icon"
                   className="w-4 h-4 mr-2"
                 />
@@ -54,7 +57,7 @@ function App() {
           {/* Right side */}
           <div className="basis-[40%] hidden md:block">
             <img
-              src="public/img/illustration-sign-up-desktop.svg"
+              src=bg
               alt="Illustration"
               className="w-full h-full object-cover rounded-r-2xl"
             />
