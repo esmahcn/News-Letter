@@ -1,9 +1,31 @@
 
 import icon from './img/icon-list.svg'
 import bg from './img/illustration-sign-up-desktop.svg'
+import { useState } from 'react';
 
 
-function App() {
+export default function App() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSucess] = useState("");
+
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
+    setSucess("");
+    if (!isValidEmail(email)) {
+      setError("valid email required");
+    } else {
+      setError("");
+      setSucess("good");
+      console.log("Subscriebed:", email)
+    }
+
+  };
   return (
     <>
       <div className="min-h-screen bg-[#1d1f2f] flex items-center justify-center p-4">
@@ -41,13 +63,23 @@ function App() {
                 And much more!
               </li>
             </ul>
-            <form className="flex flex-col space-y-3">
+            <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
               <label className="text-sm font-medium text-gray-700">Email address</label>
               <input
-                type="email"
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@company.com"
-                className="p-3 border border-gray-300 rounded-md"
+                className={`w-full px-4 py-2 border rounded-md focus:outline-none transition-all ${error
+                    ? " border-red-500 bg-red-100 text-red-700 placeholder-red-400"
+                    : "border-gray-300 "
+                  }`
+                }
               />
+
+              {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+              {success && <p className="text-green-500 text-sm mt-1">{success}</p>}
+
               <button type="submit" className="bg-[#1d1f2f] text-white py-3 rounded-md font-medium hover:opacity-90" >Subscribe to monthly newsletter
               </button>
             </form>
@@ -69,5 +101,3 @@ function App() {
     </>
   )
 }
-
-export default App
