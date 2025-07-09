@@ -1,5 +1,5 @@
 
-
+import icon from './img/icon-list.svg'
 function App() {
   return (
     <>
@@ -15,7 +15,7 @@ function App() {
             <ul className="mb-6 space-y-2 text-sm text-gray-700">
               <li className="flex items-center">
                 <img
-                  src="public/img/icon-list.svg"
+                  src={icon}
                   alt="Check icon"
                   className="w-4 h-4 mr-2"
                 />
